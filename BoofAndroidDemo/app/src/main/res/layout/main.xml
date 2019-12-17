@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+			  android:orientation="vertical" >
+
+	<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="?attr/actionBarSize"
+		android:orientation="horizontal">
+
+		<ImageButton
+			android:id="@+id/logo_button"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:layout_centerInParent="true"
+			android:adjustViewBounds="true"
+			android:background="#A1A1A1"
+			android:onClick="pressedWebsite"
+			android:scaleType="fitCenter"
+			android:src="@drawable/boofcv_logo" />
+
+		<android.support.v7.widget.Toolbar
+			android:id="@+id/my_toolbar"
+			android:layout_width="wrap_content"
+			android:layout_height="?attr/actionBarSize"
+			android:layout_alignRight="@id/logo_button"
+			android:background="#A1A1A1"
+			android:elevation="4dp"
+			android:textColorSecondary="#111111"/>
+
+	</RelativeLayout>
+
+	<ExpandableListView
+		android:paddingLeft="16dp"
+		android:paddingRight="16dp"
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:id="@+id/DemoListView" android:layout_gravity="center"/>
+
+
+</LinearLayout>
+
