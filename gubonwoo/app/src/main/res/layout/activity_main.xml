@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/one"
+        android:layout_weight="0.5" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="?attr/colorBackgroundFloating">
+
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom"
+            android:backgroundTint="?attr/colorBackgroundFloating"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/button3" />
+
+        <ImageButton
+            android:id="@+id/compare_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:backgroundTint="?attr/colorBackgroundFloating"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/button2" />
+
+        <ImageButton
+            android:id="@+id/map_btn"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:scaleType="fitCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|top"
+            android:backgroundTint="#FFFFFF"
+            android:src="@drawable/button1" />
+    </FrameLayout>
+</LinearLayout>
