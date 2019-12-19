@@ -8,18 +8,35 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" android:orientation="vertical" >
 
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/warning1"-->
+<!--            android:id="@+id/warning1"></ImageView>-->
 
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/warning2"-->
+<!--            android:id="@+id/warning2"></ImageView>-->
+
+<!--        <ImageView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/warning4"-->
+<!--            android:id="@+id/warning4"></ImageView>-->
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/warning1"
-            android:id="@+id/warning1"></ImageView>
+            android:src="@drawable/warning3"
+            android:id="@+id/warning3"></ImageView>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/warning1"
-            android:id="@+id/warning2"></ImageView>
+
+
+
+
+
+
     </LinearLayout>
 
     </LinearLayout>

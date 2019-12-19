@@ -30,6 +30,7 @@
         android:layout_height="match_parent"
         android:layout_below="@id/editTextFilter"
         android:textFilterEnabled="true"
+        android:background="#000000"
         android:id="@+id/listview1"/>
 
 </RelativeLayout>
