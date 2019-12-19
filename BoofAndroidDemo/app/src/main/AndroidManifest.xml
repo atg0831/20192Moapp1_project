@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.boofcv.android">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--remove these after camera1 API is gone?-->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+
+    <application
+        android:name="org.boofcv.android.DemoApplication"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:background="#111111"
+        android:theme="@style/Theme.AppCompat.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".DemoMain"
+            android:label="">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".PreferenceActivity" />
+        <activity android:name=".ip.BlurDisplayActivity"/>
+        <activity android:name=".ip.EnhanceDisplayActivity"/>
+        <activity android:name=".ip.GradientDisplayActivity"/>
+        <activity android:name=".ip.BinaryOpsDisplayActivity"/>
+        <activity android:name=".ip.ImageTransformActivity"/>
+        <activity android:name=".ip.ThresholdDisplayActivity"/>
+        <activity android:name=".ip.EquirectangularToViewActivity"/>
+        <activity android:name=".detect.PointDisplayActivity" />
+        <activity android:name=".detect.ScalePointDisplayActivity" />
+        <activity android:name=".detect.LineDisplayActivity" />
+        <activity android:name=".detect.ContourShapeFittingActivity"/>
+        <activity android:name=".detect.CannyEdgeActivity"/>
+        <activity android:name=".detect.DetectBlackPolygonActivity"/>
+        <activity android:name=".detect.DetectBlackPolygonHelpActivity" />
+        <activity android:name=".detect.DetectBlackEllipseActivity"/>
+        <activity android:name=".sfm.StabilizeDisplayActivity" />
+        <activity android:name=".sfm.MosaicDisplayActivity" />
+        <activity
+            android:name=".assoc.AssociationActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".calib.CalibrationActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".calib.CalibrationComputeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize" />
+        <activity android:name=".CameraInformationActivity" />
+        <activity
+            android:name=".sfm.DisparityActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".AboutActivity" />
+        <activity android:name=".tracker.ObjectTrackerActivity"/>
+        <activity android:name=".tracker.KltDisplayActivity"/>
+        <activity android:name=".tracker.StaticBackgroundMotionActivity"/>
+        <activity android:name=".calib.UndistortDisplayActivity"/>
+        <activity android:name=".calib.CalibrationHelpActivity" />
+        <activity android:name=".segmentation.SuperpixelDisplayActivity"/>
+        <activity android:name=".segmentation.ColorHistogramSegmentationActivity"/>
+        <activity android:name=".recognition.FiducialSquareBinaryActivity"/>
+        <activity android:name=".recognition.FiducialSquareBinaryHelpActivity" />
+        <activity android:name=".recognition.FiducialSquareImageActivity"/>
+        <activity android:name=".recognition.FiducialSquareImageHelpActivity" />
+        <activity android:name=".recognition.FiducialLearnActivity" />
+        <activity android:name=".recognition.FiducialImageLibraryAcitivity" />
+        <activity android:name=".recognition.FiducialSelectHelpActivity" />
+        <activity android:name=".recognition.FiducialCalibrationActivity"/>
+        <activity android:name=".recognition.FiducialCalibrationHelpActivity"/>
+        <activity android:name=".recognition.QrCodeDetectActivity"/>
+        <activity android:name=".recognition.QrCodeListActivity"/>
+        <activity android:name=".recognition.ImageClassificationActivity"/>
+    </application>
+
+</manifest>

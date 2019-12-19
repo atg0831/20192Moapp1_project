@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent">
+
+	<CheckBox
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Show Speed"
+			android:id="@+id/checkbox_speed" android:layout_gravity="center"/>
+
+	<CheckBox
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Auto Reduce"
+		android:id="@+id/checkbox_reduce" android:layout_gravity="center"/>
+
+	<CheckBox
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Use Concurrent"
+		android:id="@+id/checkbox_concurrent" android:layout_gravity="center"/>
+
+	<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				 android:id="@+id/tableLayout1"
+				 android:layout_width="wrap_content"
+				 android:layout_height="fill_parent"
+				 android:layout_gravity="center_horizontal" >
+
+		<TableRow
+				android:id="@+id/tableRow1"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:padding="5dip" >
+			<TextView
+					android:text="Camera"
+					android:textAppearance="?android:attr/textAppearanceLarge" />
+			<Spinner
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/spinner_camera" android:layout_gravity="center"/>
+		</TableRow>
+
+		<TableRow
+			android:id="@+id/tableRow2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="5dip" >
+			<TextView
+				android:text="Resolution"
+				android:textAppearance="?android:attr/textAppearanceLarge" />
+			<Spinner
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/spinner_resolution" android:layout_gravity="center"/>
+		</TableRow>
+
+
+	</TableLayout>
+
+</LinearLayout>
