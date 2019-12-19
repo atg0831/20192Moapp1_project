@@ -1,5 +1,6 @@
 package com.example.gubonwoo;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,7 +11,12 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.ArrayList;
+
+import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
 public class ListViewAdapter extends BaseAdapter implements Filterable {
     // Adapter에 추가된 데이터를 저장하기 위한 ArrayList. (원본 데이터 리스트)
@@ -39,12 +45,12 @@ public class ListViewAdapter extends BaseAdapter implements Filterable {
 
         // "listview_item" Layout을 inflate하여 convertView 참조 획득.
         if (convertView == null) {
-            LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            LayoutInflater inflater = (LayoutInflater) context.getSystemService(LAYOUT_INFLATER_SERVICE);
             convertView = inflater.inflate(R.layout.listview_item, parent, false);
         }
 
         // 화면에 표시될 View(Layout이 inflate된)으로부터 위젯에 대한 참조 획득
-        ImageView iconImageView = (ImageView) convertView.findViewById(R.id.imageView1) ;
+        final ImageView iconImageView = (ImageView) convertView.findViewById(R.id.imageView1) ;
         TextView titleTextView = (TextView) convertView.findViewById(R.id.textView1) ;
         TextView descTextView = (TextView) convertView.findViewById(R.id.textView2) ;
 
@@ -55,6 +61,33 @@ public class ListViewAdapter extends BaseAdapter implements Filterable {
         iconImageView.setImageDrawable(listViewItem.getIcon());
         titleTextView.setText(listViewItem.getTitle());
         descTextView.setText(listViewItem.getDesc());
+
+//        iconImageView.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if(v==iconImageView)
+//                {
+//                    Context mContext=getContext();
+//                    LayoutInflater inflater = (LayoutInflater) mContext.getSystemService(LAYOUT_INFLATER_SERVICE);
+//
+//                    //R.layout.dialog는 xml 파일명이고  R.id.popup은 보여줄 레이아웃 아이디
+//                    View layout = inflater.inflate(R.layout.dialog,(ViewGroup)findViewById(R.id.popup));
+//                    AlertDialog.Builder aDialog = new AlertDialog.Builder(ListViewAdapter.this);
+//
+//                    aDialog.setTitle("Warning"); //타이틀바 제목
+//                    aDialog.setView(layout); //dialog.xml 파일을 뷰로 셋팅
+//
+//                    //그냥 닫기버튼을 위한 부분
+//                    aDialog.setNegativeButton("닫기", new DialogInterface.OnClickListener() {
+//                        public void onClick(DialogInterface dialog, int which) {
+//                        }
+//                    });
+//                    //팝업창 생성
+//                    AlertDialog ad = aDialog.create();
+//                    ad.show();//보여줌!
+//                }
+//            }
+//        });
 
         return convertView;
     }

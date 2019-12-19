@@ -25,8 +25,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
             android:backgroundTint="?attr/colorBackgroundFloating"
-            android:maxWidth="80dp"
-            android:maxHeight="80dp"
+            android:maxWidth="50dp"
+            android:maxHeight="70dp"
             android:scaleType="fitCenter"
             android:src="@drawable/button3" />
 
@@ -36,15 +36,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:backgroundTint="?attr/colorBackgroundFloating"
-            android:maxWidth="80dp"
-            android:maxHeight="80dp"
+            android:maxWidth="50dp"
+            android:maxHeight="70dp"
             android:scaleType="fitCenter"
             android:src="@drawable/button2" />
 
         <ImageButton
             android:id="@+id/map_btn"
-            android:maxWidth="80dp"
-            android:maxHeight="80dp"
+            android:maxWidth="50dp"
+            android:maxHeight="70dp"
             android:scaleType="fitCenter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
