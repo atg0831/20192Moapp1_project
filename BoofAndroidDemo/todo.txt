@@ -1,0 +1,10 @@
+
+TODO: Binary blob/contour demonstration
+  * show inner/outer/pixels
+TODO: Add distort MLS example
+TODO: Webpage with grid for calibration.  Add link in app description
+TODO: Color histogram lookup of photos on phone?
+TODO: Preview in disparity
+TODO: Provide guide lines for good stereo
+TODO: Preview in associate
+TODO: 3D Point Cloud for Disparity

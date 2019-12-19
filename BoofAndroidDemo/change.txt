@@ -1,0 +1,287 @@
+Change Log for BoofCV Demonstration App
+
+(year)-(month)-(day)
+
+TODO improve performance by removing locks from visualization
+
+-------------------------------------------------
+Version 2.5.0
+Date: 2019-07-07
+
+- Updated to 0.34 of BoofCV
+- Line detector
+  * Visualization improvements
+  * Added line segment
+  * Fixed resolution reduction issue
+
+-------------------------------------------------
+Version 2.4.1
+Date: 2019-03-20
+
+- ACRA was not actually fully enabled
+- Disable threading if less than API 24 because of the lack of JDK 1.8 features
+  * If someone figures out how to get around this limitation let me know
+
+-------------------------------------------------
+Version 2.4
+Date: 2019-03-20
+
+- Updated to 0.33 of BoofCV
+- Toggle concurrent algorithms
+
+-------------------------------------------------
+Version 2.3
+Date: 2018-12-26
+
+- Updated to stable 0.32 of BoofCV
+- More accurate uncalibrated intrinsics
+- Added stability bar to square fiducials
+- 3D cubes on top of QR
+
+-------------------------------------------------
+Version 2.2
+Date: 2018-10-21
+
+- Updated to stable 0.31 of BoofCV
+- Visualization uses unsafe buffering for speed
+  * There could be visual artifacts
+- Added NICK thresholding
+- Re-tuned stereo disparity making it a bit easy to get good results
+
+-------------------------------------------------
+Version 2.1
+Date: 2018-05-19
+
+- Move ACRA destination address into an asset to prevent people from sending the bug reports
+- (BoofCV) Attempt to fix image already closed exception
+- Added camera resolution metadata to exception report
+- Attempts to try to recover from out of memory exceptions better
+- Only one variant of Fast Corner is selectable now
+- Added Equirectangular to different camera models
+
+-------------------------------------------------
+Version 2.0.10
+Date: 2018-05-05
+
+- Catch camera2 exception when not present, shows a dialog, and exits
+- (BoofCV) More new logic in an attempt to prevent a camera from being opened twice
+- (BoofCV) Correctly shuts down preview reader
+- More useful debug info
+- Fixed regression in stereo
+- DetectBlackPolygon makes sure number of sizes text isn't empty
+- Square Fiducials
+  * Fixed bug in BoofCV where a previous bug fix made there be too many points
+- Sanity check text in calibration
+
+-------------------------------------------------
+Version 2.0.9
+Date: 2018-05-02
+
+- Added more QR Code Detector controls
+- Attempts to catch and recover from out of memory errors when a new process is init
+- Main activity now uses AppCompatActivity so that the ToolBar works on older devices
+- (BoofCV) Designed to handle camera being closed while opening a camera
+- Can now cancel a download for image classify
+- Changed min API to 22 because there's a camera2 API bug in 21 that breaks color images
+- Rotates images in classification activity which improves results
+
+-------------------------------------------------
+Version 2.0.8
+Date: 2018-04-30
+
+- DemoProcessing contract more explicitly defined
+  * Process and visualize only called after initialize is called
+  * Initialize only called once the camera is fully initialized and the resolution known
+  * This should fix a known crash bug and solve a few unknown ones
+- YUV conversion
+  * Fixed overflow in Y if last row is smaller.
+- Fix/Avoid null pointer on app.preference by making sure it's never null
+- Safely close the downloading dialog for classifiers
+- Classifier download will gracefully abort now
+
+-------------------------------------------------
+Version 2.0.7
+Date: 2018-04-29
+
+- Stale BoofCV was included in previous release
+- More info in About dialog and ACRA report
+
+-------------------------------------------------
+Version 2.0.6
+Date: 2018-04-29
+
+- Fix for YUV_420_888 problem using ACRA crash report
+- Fix for premature creation of image square fiducial
+- Fixed potential camera related null pointer exceptions
+
+-------------------------------------------------
+Version 2.0.5
+Date: 2018-04-28
+
+- Removed static variables from main activity and moved to DemoApplication
+  this prevents them from being discarded if the activity is unloaded
+  * Not everyone on the internet agrees with this approach
+- Faster binary contour. This makes almost all fiducial detectors faster.
+- Added ACRA for detailed error reports on a crash
+
+-------------------------------------------------
+Version 2.0.4
+Date: 2018-04-25
+
+- Fixed another Yuv420_888 crash bug in BoofCV
+
+-------------------------------------------------
+Version 2.0.3
+Date: 2018-04-25
+
+- Fixed crash bug in BoofCV's ConvertYuv420_888
+
+-------------------------------------------------
+Version 2.0.2
+Date: 2018-04-25
+
+- Fixed crash bug in undistort without intrinsic
+
+-------------------------------------------------
+Version 2.0
+Date: 2018-04-24
+
+- Updated to BoofCV v0.30
+- Ported activities over to Camera2 API
+- Calibration
+  * Moved calibration to an application public directory that can be accessed without rooting the phone
+  * Supports all calibration target types
+  * Better rendering
+  * Better configuration UI
+- KLT has a slider that controls the number of features
+- Canny shows a washed out image in the background
+- Object Tracker doesn't force all trackers to use color.
+  * This makes some trackers MUCH faster
+- Filter Activities
+  * Touching the screen shows the input image
+- Added QR Code example
+- Added GMM to background
+- Mosaic and Stabilize
+  * Added SURF tracker option
+- Point/Corner detector
+  * more controls
+  * another variant of FAST
+- Added color histogram segmentation
+
+-------------------------------------------------
+Version 1.8.1
+Date: 2016-02-08
+
+- Work around so that if calibration files are in an old format they will be ignored and don't cause a crash
+
+-------------------------------------------------
+Version 1.8
+Date: 2016-02-08
+
+- Updated to BoofCV v0.26
+- Updated how square grid calibration is specified
+- Added circle asymmetric grid for calibration and fiducials
+- Added black ellipse detector
+- Added Image Classifiers
+
+-------------------------------------------------
+Version 1.7
+Date: 2016
+
+- Updated to BoofCV v0.24.1
+  * This includes a fix for inverted camera on the Nexus 5x
+
+-------------------------------------------------
+Version 1.6.1
+Date: 2015-11-18
+
+- Updated to BoofCV v0.20
+- Calibration now shows a preview of the target you're configuring in the opening dialog
+- Added calibration fiducials to fiducial menu
+- Tap fiducials and you will see binary image
+- reset button in disparity activity
+
+-------------------------------------------------
+Version 1.6
+Date: 2015-9-21
+
+- Calibration now checks to see if the target specified has a valid number of rows/columns
+  * Before it would just crash
+- Fiducials
+  * Fixed bug which caused it to run very slow.  New image and detector was declared every cycle.
+  * Can now add fiducials by taking a picture of them
+- Binary Image: Added thin operator
+- Added a slider to the blur activity
+- When not in use seekbar is dimmed for thresholding
+- Added motion detection activity
+  * With PIP mode when touched!
+- Landscape mode for fiducial help
+- Added black polygon detector
+
+-------------------------------------------------
+Version 1.5
+Date: 2014-9-23
+
+- Pushed several classes into BoofCV Android integration package
+- Added image segmentation demonstration
+- Added fiducials
+- Stereo disparity switches to disparity view after it computes the disparity
+- Added example for automatic thresholding
+
+-------------------------------------------------
+Version 1.4.1
+Date: 2014-1-17
+
+- Fixed weird flicker during enhance.
+  * It was grabbing the wrong image to process
+
+-------------------------------------------------
+Version 1.4
+Date: 2014-1-17
+
+- Added mean-shift likelihood tracker
+- Added undistort activity
+- Application can now be loaded onto Nexus 7 devices
+  * Thanks to "Member 4367060" for the fix
+- Front facing images are flipped for correct viewing
+  * Thanks to "Member 4367060" for pointing out this problem
+- Fixed bug where camera capture doesn't start again if surfaceCreated isn't called
+  * Isn't a problem under normal operation because all camera activities are changed landscape view
+  * Thanks to "Member 4367060" for pointing out this problem
+- Fixed bug where NV21 was being incorrectly converted and causing a crash for some image sizes
+  * Change occurs inside of BoofCV
+
+-------------------------------------------------
+Version 1.3
+Date: 2013-12-28
+
+- Added object tracking
+- Added image enhance
+- Added image transform
+- Added canny edge
+- Reduced number of point trackers
+
+-------------------------------------------------
+Version 1.1.1
+Date: 2012-02-20
+
+- Changed how calibration grid size is specified
+- Reduced size of calibration target dialog so that it will fit in smaller screen
+
+-------------------------------------------------
+Version 1.1
+Date: 2012-02-20
+
+- All classes at least have a high level description now
+- Buttons in DDA tracker activity are now an appropriate size
+- Fixed AndroidManifest.xml so that tablets are supported
+- Removed continuous detection of calibration targets
+- Added help for calibration
+- Colorized association window
+- Changed how threshold is computed during calibration in an attempt to make it more robust to shadows
+
+-------------------------------------------------
+Version 1.0
+Date:   2012-02-18
+
+- Initial public release on Play store
