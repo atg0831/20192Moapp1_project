@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="horizontal"
+			  android:layout_width="match_parent"
+			  android:layout_height="match_parent">
+
+	<Spinner
+			android:id="@+id/spinner_algs"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:gravity="center"
+			android:layout_gravity="center" />
+
+	<ToggleButton android:layout_width="wrap_content"
+				  android:layout_height="wrap_content"
+				  android:gravity="center"
+				  android:layout_gravity="center"
+				  android:textOn="Down"
+				  android:textOff="Up"
+				  android:id="@+id/toggle_threshold"/>
+
+	<ToggleButton android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:gravity="center"
+		android:layout_gravity="center"
+		android:textOn="3x3"
+		android:textOff="1x1"
+		android:id="@+id/toggle_local_block"/>
+
+	<SeekBar
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight=".40"
+			android:gravity="center"
+			android:layout_gravity="center"
+			android:max="40"
+			android:progress="10"
+			android:secondaryProgress="0"
+			android:id="@+id/slider_width"/>
+
+</LinearLayout>
