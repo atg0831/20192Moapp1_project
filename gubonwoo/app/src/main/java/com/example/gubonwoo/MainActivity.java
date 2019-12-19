@@ -22,37 +22,38 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
 
-        ImageButton cbutton=(ImageButton) findViewById(R.id.compare_btn);
+        ImageButton cbutton = (ImageButton) findViewById(R.id.compare_btn);
         cbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1=new Intent(getApplicationContext(), compareActivity.class);
+                Intent intent1 = new Intent(getApplicationContext(), compareActivity.class);
                 startActivity(intent1);
 
             }
         });
 
 
-        ImageButton mbutton=(ImageButton) findViewById(R.id.map_btn);
+        ImageButton mbutton = (ImageButton) findViewById(R.id.map_btn);
         mbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1=new Intent(getApplicationContext(), MapActivity.class);
+                Intent intent1 = new Intent(getApplicationContext(), MapActivity.class);
                 startActivity(intent1);
 
             }
         });
 
-        ImageButton sbutton=(ImageButton) findViewById(R.id.search_btn);
+
+        ImageButton sbutton = (ImageButton) findViewById(R.id.search_btn);
         sbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent1=new Intent(getApplicationContext(), SearchActivity.class);
+                Intent intent1 = new Intent(MainActivity.this, SearchActivity.class);
+//                intent1.putExtra("text", "from main");
                 startActivity(intent1);
 
             }
         });
     }
-
-
 }
+

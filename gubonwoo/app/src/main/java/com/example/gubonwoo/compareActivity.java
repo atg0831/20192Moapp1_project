@@ -10,6 +10,7 @@ import android.os.Environment;
 import android.provider.MediaStore;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
@@ -22,6 +23,7 @@ public class compareActivity extends AppCompatActivity {
     Button Button_camera;
     ImageView imageView;
     Button button;
+    Button btn_search;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +43,7 @@ public class compareActivity extends AppCompatActivity {
         Button_camera=(Button)findViewById(R.id.camera);
         imageView=(ImageView)findViewById(R.id.image);
         button=(Button)findViewById(R.id.button);
+        btn_search=(Button)findViewById(R.id.search);
         button.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view){
@@ -58,7 +61,20 @@ public class compareActivity extends AppCompatActivity {
               startActivityForResult(i,0);
           }
         });
-
+//
+//        btn_search.setOnClickListener(new View.OnClickListener(){
+//            @Override
+//            public void onClick(View view){
+//
+////                EditText editTextFilter=(EditText)findViewById(R.id.editTextFilter);
+//                Intent intent= new Intent(compareActivity.this,SearchActivity.class);
+////                editTextFilter.setText("엔진/배출 경고등");
+//                intent.putExtra("text","엔진/배출 경고등");
+//
+//                startActivity(intent);
+//
+//            }
+//        });
 
     }
     @Override
