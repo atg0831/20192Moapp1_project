@@ -1,0 +1,12 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="org.opencv"
+4    android:versionCode="3000"
+5    android:versionName="3.0.0" > <!-- <uses-sdk android:minSdkVersion="8" /> -->
+6    <uses-sdk
+7        android:minSdkVersion="21"
+7-->/home/atg0831/20192Moapp1_project/gubonwoo/opencv/java/AndroidManifest.xml
+8        android:targetSdkVersion="26" />
+8-->/home/atg0831/20192Moapp1_project/gubonwoo/opencv/java/AndroidManifest.xml
+9
+10</manifest>
